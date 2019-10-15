@@ -1,0 +1,394 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+    <!------ Include the above in your HEAD tag ---------->
+
+    <style>
+
+        body, html {
+            height: 100%;
+            margin: 0;
+            font: 400 15px/1.8 "Lato", sans-serif;
+            color: #777;
+        }
+
+        .bgimg-1, .bgimg-2, .bgimg-3 {
+            position: relative;
+            opacity: 0.65;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+        .bgimg-1 {
+            background-image: url("1.jpg");
+            min-height: 100%;
+        }
+
+        .bgimg-2 {
+            background-image: url("2.jpg");
+            min-height: 400px;
+        }
+
+        .bgimg-3 {
+            background-image: url("3.jpg");
+            min-height: 400px;
+        }
+
+        .caption {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 100%;
+            text-align: center;
+            color: #000;
+        }
+
+        .caption span.border {
+            background-color: #111;
+            color: #fff;
+            padding: 18px;
+            font-size: 25px;
+            letter-spacing: 10px;
+        }
+
+        h3 {
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            font: 20px "Lato", sans-serif;
+            color: #111;
+        }
+
+        /* Turn off parallax scrolling for tablets and phones */
+        @media only screen and (max-device-width: 1024px) {
+            .bgimg-1, .bgimg-2, .bgimg-3 {
+                background-attachment: scroll;
+            }
+        }
+
+        @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+        section {
+            padding: 60px 0;
+        }
+
+        section .section-title {
+            text-align: center;
+            color: #007b5e;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+        }
+        #footer {
+            background:#4ddbff !important;
+        }
+        #footer h5{
+            padding-left: 10px;
+            border-left: 3px solid #eeeeee;
+            padding-bottom: 6px;
+            margin-bottom: 20px;
+            color:#ffffff;
+        }
+        #footer a {
+            color: #ffffff;
+            text-decoration: none !important;
+            background-color: transparent;
+            -webkit-text-decoration-skip: objects;
+        }
+        #footer ul.social li{
+            padding: 3px 0;
+        }
+        #footer ul.social li a i {
+            margin-right: 5px;
+            font-size:25px;
+            -webkit-transition: .5s all ease;
+            -moz-transition: .5s all ease;
+            transition: .5s all ease;
+        }
+        #footer ul.social li:hover a i {
+            font-size:30px;
+            margin-top:-10px;
+        }
+        #footer ul.social li a,
+        #footer ul.quick-links li a{
+            color:#ffffff;
+        }
+        #footer ul.social li a:hover{
+            color:#eeeeee;
+        }
+        #footer ul.quick-links li{
+            padding: 3px 0;
+            -webkit-transition: .5s all ease;
+            -moz-transition: .5s all ease;
+            transition: .5s all ease;
+        }
+        #footer ul.quick-links li:hover{
+            padding: 3px 0;
+            margin-left:5px;
+            font-weight:700;
+        }
+        #footer ul.quick-links li a i{
+            margin-right: 5px;
+        }
+        #footer ul.quick-links li:hover a i {
+            font-weight: 700;
+        }
+
+        @media (max-width:767px){
+            #footer h5 {
+                padding-left: 0;
+                border-left: transparent;
+                padding-bottom: 0px;
+                margin-bottom: 10px;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">cybersystem</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Page 1-1</a></li>
+                        <li><a href="#">Page 1-2</a></li>
+                        <li><a href="#">Page 1-3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Page 2</a></li>
+                <li><a href="#">Page 3</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="bgimg-1">
+    <div class="caption">
+
+    </div>
+</div>
+
+<div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+    <h3 style="text-align:center;">Parallax Demo</h3>
+
+    <p>Scroll up and down to really get the feeling of how Parallax Scrolling works.
+        Scroll up and down to really get the feeling of how Parallax Scrolling works.Scroll up and down to really get the feeling of how Parallax Scrolling works.
+    </p>
+</div>
+
+<div class="bgimg-2">
+    <div class="caption">
+        <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">LESS HEIGHT</span>
+    </div>
+</div>
+
+<div style="position:relative;">
+    <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+        <p>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>
+    </div>
+</div>
+
+<div class="bgimg-3">
+    <div class="caption">
+        <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">SCROLL UP</span>
+    </div>
+</div>
+
+
+
+<div class="bgimg-1">
+    <div class="caption">
+
+    </div>
+</div>
+<div style="position:relative;">
+    <div class="container" style="margin-top: 150px">
+        <h1 style="margin: 20px;text-align: center">Top challenges</h1>
+        <div class="col-sm-5" style="background-color: #f1f1f1;height:375px;opacity: 0.5 " data-aos="zoom-out-down">
+            <h3 style="margin: 50px;text-align: center"><a style="text-decoration: none" data-aos="fade-down-right">two mans boat</a></h3>
+
+            <ul ><a href="#" style="text-decoration: none">
+
+                <li data-aos="zoom-out-down"> point 1
+
+                <li style="margin-left: 20px"  data-aos="fade-down-left">point 1-1</li>
+                <li style="margin-left: 20px" data-aos="zoom-out-down">point 1-1</li>
+                <li  style="margin-left: 20px"  data-aos="fade-down-left">point 1-1</li>
+                </li>
+
+
+                <li  data-aos="fade-down-left">point 1</li>
+                <li data-aos="zoom-out-down">point 1</li>
+                <li  data-aos="fade-down-left">point 1</li>
+            </a>
+            </ul>
+            <div class="container" ></div>
+
+        </div>
+        <div class="col-sm-2"></div>
+        <div class="col-sm-5" style="background-color: #f1f1f1;height:375px;opacity: 0.5" data-aos="zoom-out-down">
+
+            <h3 style="text-align: center;margin: 50px;" data-aos="fade-down-right"><a href="#" style="text-decoration: none">old monk</a></h3>
+            <ul >
+
+                <li data-aos="fade-down-left"><a href="#">point 1</a>
+
+                <li style="margin-left: 20px"  data-aos="fade-down-left"><a href="#" style="text-decoration: none">point 1-1</a></li>
+                <li style="margin-left: 20px" data-aos="zoom-out-down"><a href="#" style="text-decoration: none">point 1-1</a></li>
+                <li  style="margin-left: 20px"  data-aos="fade-down-left"><a href="#" style="text-decoration: none">point 1-1</a></li>
+                </li>
+
+
+                <li  data-aos="fade-down-left"><a href="#" style="text-decoration: none">point 1</a></li>
+                <li data-aos="zoom-out-down"><a href="#" style="text-decoration: none">point 1</a></li>
+                <li  data-aos="fade-down-left"><a href="#" style="text-decoration: none">point 1</a></li>
+
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+<div style="position:relative;margin-bottom:50px">
+    <div class="container" style="margin-top: 150px">
+        <h1 style="margin: 20px;text-align: center">monthly TOP challenges</h1>
+        <div class="col-sm-5" style="background-color: #f1f1f1;height:375px;opacity: 0.5;border-radius: 15px " data-aos="zoom-out-down">
+            <h3 style="margin: 50px;text-align: center"><a style="text-decoration: none" data-aos="fade-down-right">two mans boat</a></h3>
+
+            <ul ><a href="#" style="text-decoration: none">
+
+                <li data-aos="zoom-out-down"> point 1
+
+                <li style="margin-left: 20px"  data-aos="fade-down-left">point 1-1</li>
+                <li style="margin-left: 20px" data-aos="zoom-out-down">point 1-1</li>
+                <li  style="margin-left: 20px"  data-aos="fade-down-left">point 1-1</li>
+                </li>
+
+
+                <li  data-aos="fade-down-left">point 1</li>
+                <li data-aos="zoom-out-down">point 1</li>
+                <li  data-aos="fade-down-left">point 1</li>
+            </a>
+            </ul>
+            <div class="container" ></div>
+
+        </div>
+        <div class="col-sm-2"></div>
+        <div class="col-sm-5" style="background-color: #f1f1f1;height:375px;opacity: 0.5" data-aos="zoom-out-down">
+
+            <h3 style="text-align: center;margin: 50px;" data-aos="fade-down-right"><a href="#" style="text-decoration: none">old monk</a></h3>
+            <ul >
+
+                <li data-aos="fade-down-left"><a href="#">point 1</a>
+
+                <li style="margin-left: 20px"  data-aos="fade-down-left"><a href="#" style="text-decoration: none">point 1-1</a></li>
+                <li style="margin-left: 20px" data-aos="zoom-out-down"><a href="#" style="text-decoration: none">point 1-1</a></li>
+                <li  style="margin-left: 20px"  data-aos="fade-down-left"><a href="#" style="text-decoration: none">point 1-1</a></li>
+                </li>
+
+
+                <li  data-aos="fade-down-left"><a href="#" style="text-decoration: none">point 1</a></li>
+                <li data-aos="zoom-out-down"><a href="#" style="text-decoration: none">point 1</a></li>
+                <li  data-aos="fade-down-left"><a href="#" style="text-decoration: none">point 1</a></li>
+
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+<section id="footer">
+    <div class="container">
+        <div class="row text-center text-xs-center text-sm-left text-md-left">
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <h5>Quick links</h5>
+                <ul class="list-unstyled quick-links"  data-aos="fade-down-right">
+                    <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Home</a></li>
+                    <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>About</a></li>
+                    <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
+
+                </ul>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <h5>Quick links</h5>
+                <ul class="list-unstyled quick-links"  data-aos="fade-down-right">
+                    <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Home</a></li>
+                    <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>About</a></li>
+                    <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
+
+                </ul>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <h5>Quick links</h5>
+                <ul class="list-unstyled quick-links"  data-aos="fade-down-right">
+                    <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Home</a></li>
+                    <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>About</a></li>
+
+                    <li><a href="https://wwwe.sunlimetech.com" title="Design and developed by"><i class="fa fa-angle-double-right"></i>Imprint</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+                <ul class="list-unstyled list-inline social text-center">
+                    <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-facebook"></i></a></li>
+                    <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-twitter"></i></a></li>
+                    <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-instagram"></i></a></li>
+                    <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-google-plus"></i></a></li>
+                    <li class="list-inline-item"><a href="javascript:void();" target="_blank"><i class="fa fa-envelope"></i></a></li>
+                </ul>
+            </div>
+            </hr>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+              </p>
+            </div>
+            </hr>
+        </div>
+    </div>
+</section>
+<!-- ./Footer -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+</body>
+</html>
